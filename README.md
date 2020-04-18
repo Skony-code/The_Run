@@ -8,7 +8,8 @@ P - pause
 
 Arrow up/down - menu navigation
 ## Screeshots
-
+![Menu](https://github.com/Skony-code/The_Run/blob/master/Menu.PNG)
+![Ingame](https://github.com/Skony-code/The_Run/blob/master/Ingame.PNG)
 ## Disclaimer
 I do not own any of the ingame art. All of it was avialable for free and belongs to their respective owners:
 
