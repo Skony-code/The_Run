@@ -41,16 +41,8 @@ public class Track {
         }
 
         Obstacles = new ArrayList<Entity>();
-        Obstacles.add(new Entity(1600,HEIGHT-LEVEL-22,78,45,loader.getObstalce()));
         Obstacles.add(new Entity(1200,HEIGHT-LEVEL-22,78,45,loader.getObstalce()));
-    }
-    public void addObstacle()
-    {
-        Obstacles.add(new Entity(WIDTH,HEIGHT-LEVEL-22,78,45,loader.getObstalce()));
-    }
-    public void addRandomObstacle()
-    {
-        
+        Obstacles.add(new Entity(1600,HEIGHT-LEVEL-22,78,45,loader.getObstalce()));
     }
     public void go(double delta)
     {
@@ -88,13 +80,10 @@ public class Track {
     }
     public void updateObstacles()
     {
-        for(int i=0;i<Obstacles.size();i++)
+        if(Obstacles.get(0).getx()<0-Obstacles.get(0).getSprite().getWidth(null)/2)
         {
-            if(Obstacles.get(i).getx()<0-Obstacles.get(i).getSprite().getWidth(null)/2)
-            {
-                Obstacles.remove(i);
-                addObstacle();
-            }
+            Obstacles.add(new Entity(WIDTH+40,HEIGHT-LEVEL-22,78,45,loader.getObstalce()));
+            Obstacles.remove(0);
         }
     }
     public void updateGround()
